@@ -118,6 +118,10 @@
 	margin: 0 auto;
 }
 
+.region.top.left .module.updatenotification {
+	margin-top: 40px;
+}
+
 .region.top.right {
 	left: calc(var(--left-column-width) + var(--column-gap));
 	right: 0;
@@ -426,6 +430,8 @@
 }
 
 #CX3_POPOVER {
+	display: flex;
+	flex-direction: column;
 	width: min(640px, calc(100vw - 32px));
 	max-width: 640px;
 	min-width: min(400px, calc(100vw - 32px));
@@ -444,6 +450,13 @@
 #CX3_POPOVER[popover] {
 	padding: 0;
 	border: none;
+}
+
+#CX3_POPOVER .container {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	min-height: 0;
 }
 
 #CX3_POPOVER:popover-open {
@@ -498,8 +511,10 @@
 
 #CX3_POPOVER .content {
 	display: flex;
+	flex: 1 1 auto;
 	flex-direction: column;
 	gap: 14px;
+	min-height: 0;
 	padding: 22px 24px 24px;
 	background: transparent;
 	overflow-y: auto;

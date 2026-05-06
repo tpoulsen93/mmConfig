@@ -65,11 +65,6 @@ let config = {
 			module: "alert",
 		},
 		{
-			module: "updatenotification",
-			position: "bottom_left",
-			// classes: "fixed-page"
-		},
-		{
 			module: "MMM-Touch",
 			position: "fullscreen_above",
 			classes: "fixed-page",
@@ -109,6 +104,11 @@ let config = {
 				lon: Number("${SECRET_HOME_LON}"),
 				dateFormat: "dddd, MMMM D"
 			}
+		},
+		{
+			module: "updatenotification",
+			position: "top_left",
+			classes: "fixed-page"
 		},
 		{
 			module: "MMM-ThemeToggle",
@@ -221,8 +221,8 @@ let config = {
 			config: {
 				weatherProvider: "openmeteo",
 				type: "current",
-				lat: Number("${SECRET_HOME_LAT}"),
-				lon: Number("${SECRET_HOME_LON}"),
+				lat: "${SECRET_HOME_LAT}",
+				lon: "${SECRET_HOME_LON}",
 				showHumidity: true,
 				showSun: true,
 				showWindDirection: true,
@@ -236,8 +236,8 @@ let config = {
 			config: {
 				weatherProvider: "openmeteo",
 				type: "forecast",
-				lat: Number("${SECRET_HOME_LAT}"),
-				lon: Number("${SECRET_HOME_LON}"),
+				lat: "${SECRET_HOME_LAT}",
+				lon: "${SECRET_HOME_LON}",
 				maxEntries: 4,
 				forecastDateFormat: "ddd",
 				fade: false,
