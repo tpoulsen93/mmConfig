@@ -23,6 +23,16 @@ This directory is a nested Git repository inside a separate MagicMirror checkout
 - Config repo: `/home/tp/MagicMirror/config`
 - Config remote: `https://github.com/tpoulsen93/mmConfig.git`
 
+## Install Enabled Modules
+
+From the config directory, install the third-party and local modules used by `config.js`:
+
+```bash
+./install-modules.sh
+```
+
+The script skips modules that already exist. Use `./install-modules.sh --dry-run` to preview its work, or set `MAGICMIRROR_DIR=/path/to/MagicMirror` to target another checkout.
+
 The parent MagicMirror repository ignores `config/`, so this repository keeps its own Git history, branches, remotes, and commits without affecting the upstream MagicMirror repo.
 
 ## Daily Workflow
